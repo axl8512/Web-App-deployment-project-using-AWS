@@ -1,1 +1,39 @@
 
+name: CI-CD Build and Deploy Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout source (for record / future use)
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      # Step 2: Deploy to EC2 using SSH
+      - name: Deploy Docker image to EC2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            # Stop and remove old container
+            docker stop frontend-app || true
+            docker rm frontend-app || true
+
+            # Clean old app directory
+            rm -rf ~/devops || true
+
+            # Clone repository
+            git clone https://github.com/axl8512/Web-App-deployment-project-using-AWS/
+            cd devops/CI-CD\ DOCKERIZED\ APP/Source\ Code
+
+            # Build and run Docker container
+            docker build -t frontend-app .
+            docker run -d -p 80:80 --name frontend-app frontend-app
