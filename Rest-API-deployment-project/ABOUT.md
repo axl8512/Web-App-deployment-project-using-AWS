@@ -30,25 +30,25 @@ Docker Container (Node.js REST API)
 
 Tech Stack:
 
-Node.js (Express.js) – REST API development
+* Node.js (Express.js) – REST API development
 
-Docker – Application containerization
+* Docker – Application containerization
 
-Amazon EC2 – Docker image build server
+* Amazon EC2 – Docker image build server
 
-Amazon ECR – Container image registry
+* Amazon ECR – Container image registry
 
-Amazon ECS (Fargate) – Serverless container orchestration
+* Amazon ECS (Fargate) – Serverless container orchestration
 
-Application Load Balancer (ALB) – Traffic routing and health checks
+* Application Load Balancer (ALB) – Traffic routing and health checks
 
-AWS VPC and Security Groups – Networking and access control
+* AWS VPC and Security Groups – Networking and access control
 
-AWS CLI – Image push and infrastructure interaction
+* AWS CLI – Image push and infrastructure interaction
 
 
 
-Project Structure
+Project Structure:
 rest-api/
 
 │── app.js
@@ -100,7 +100,10 @@ COPY . .
 
 EXPOSE 3000
 CMD ["node", "app.js"]
-AWS Deployment Workflow
+
+
+
+AWS Deployment Workflow:
 
 
 
