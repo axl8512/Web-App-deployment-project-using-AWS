@@ -105,7 +105,7 @@ AWS Deployment Workflow
 
 
 
-1. EC2 (Docker Build Server)
+1. EC2 (Docker Build Server):
 
 Launch an Ubuntu EC2 instance
 
@@ -114,7 +114,7 @@ Install Docker
 Build the REST API Docker image
 
 
-2. Amazon ECR
+2. Amazon ECR:
 
 Create a private ECR repository
 
@@ -123,7 +123,7 @@ Authenticate Docker with ECR
 Tag and push the image
 
 
-3. Amazon ECS (Fargate)
+3. Amazon ECS (Fargate):
 
 Create an ECS task definition
 
@@ -132,7 +132,7 @@ Configure CPU and memory
 Enable CloudWatch logging
 
 
-4. Application Load Balancer
+4. Application Load Balancer:
 
 Configure the ALB
 
@@ -141,7 +141,7 @@ Create a target group
 Set the health check path to /health
 
 
-5. ECS Service
+5. ECS Service:
 
 Attach the service to the ALB
 
@@ -171,7 +171,7 @@ Expected response:
 
 
 
-Key Highlights
+Key Highlights:
 
 * Fully serverless container deployment using ECS Fargate
 
