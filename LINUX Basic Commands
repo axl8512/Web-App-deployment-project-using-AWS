@@ -38,3 +38,35 @@ File commands:
 | cat        |   Display file contents              | `cat file.txt`                   |
 | echo       |   Display text                       | `echo "Hello"`                   |
 | echo >>    |   Append text to a file              | `echo "Hi" >> file.txt`          |
+
+
+
+text editor: 
+
+| Editor |     What it Does                     |           Example                |
+|--------|--------------------------------------|----------------------------------|
+| vi     |   Open Vi editor                     | `vi file.txt`                    |
+| vim    |   Open Vim editor                    | `vim file.txt`                   |
+| nano   |   Simple text editor                 | `nano file.txt`                  |
+
+
+
+Editor shortcuts:
+
+| Shortcut |     What it Does                     |
+|----------|--------------------------------------|
+| :q!      |   Quit vi/vim without saving         |
+| dd       |   Delete a line in vi/vim             |
+| Ctrl + X |   Exit Nano editor                   |
+| Ctrl + Y |   Save file in Nano                  |
+
+
+
+Useful shortcuts:
+
+| Shortcut         |     What it Does                     |
+|------------------|--------------------------------------|
+| Tab              |   Auto-complete command or file       |
+| Ctrl + Shift + C |   Copy from terminal                 |
+| Ctrl + Shift + V |   Paste into terminal                |
+
